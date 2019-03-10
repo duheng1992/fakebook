@@ -1,24 +1,17 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-
-import { Header } from '../../component/Header'
-import { Footer } from '../../component/Footer'
 import { View } from '@tarojs/components'
 
-import { ShowList } from '../../component/ShowList'
+import { Footer } from '../../component/Footer'
 
-import './index.scss'
 import 'taro-ui/dist/style/index.scss'
 import "taro-ui/dist/style/components/button.scss";
 import "taro-ui/dist/style/components/loading.scss";
 
-export default class Index extends Component {
+export default class Photo extends Component {
 
   /**
-
+   * 
    */
-  config: Config = {
-    navigationBarTitleText: '首页'
-  }
 
   componentWillMount () { }
 
@@ -33,13 +26,12 @@ export default class Index extends Component {
   render () {
     return (
       <View>
-      <Header></Header>
-      
-      <ShowList></ShowList>
-      <Footer current="0"></Footer>
-
+        <Footer current="1"></Footer>
       </View>
     )
   }
 
 }
+
+
+export { Photo }

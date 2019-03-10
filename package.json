@@ -1,5 +1,5 @@
 {
-  "name": "myWork",
+  "name": "mywork",
   "version": "1.0.0",
   "private": true,
   "description": "test",
@@ -53,5 +53,14 @@
     "eslint-plugin-taro": "1.2.25",
     "@typescript-eslint/parser": "^1.6.0",
     "typescript": "^3.0.1"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duheng1992/fakebook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/duheng1992/fakebook/issues"
+  },
+  "homepage": "https://github.com/duheng1992/fakebook#readme"
 }
