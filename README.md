@@ -7,3 +7,5 @@
 
 3、组件路由不能用：
 解决：要在app.tsx中配置pages
+
+Copyright (c) 2019
