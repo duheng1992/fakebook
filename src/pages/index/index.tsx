@@ -4,7 +4,7 @@ import { Header } from '../../component/Header'
 import { Footer } from '../../component/Footer'
 import { View } from '@tarojs/components'
 
-import { ShowList } from '../../component/ShowList'
+import { ShowLists } from '../../component/ShowList'
 
 import './index.scss'
 import 'taro-ui/dist/style/index.scss'
@@ -35,7 +35,7 @@ export default class Index extends Component {
       <View>
       <Header></Header>
       
-      <ShowList></ShowList>
+      <ShowLists></ShowLists>
       <Footer current="0"></Footer>
 
       </View>
