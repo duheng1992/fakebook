@@ -1,3 +1,5 @@
+# Project Fakebook
+
 踩坑：
 1、npm i时报错：code CERT_NOT_YET_VALID
 解决：npm config set strict-ssl false
@@ -8,4 +10,6 @@
 3、组件路由不能用：
 解决：要在app.tsx中配置pages
 
-Copyright (c) 2019
+---
+
+Copyright (c) 2019, Heng Du & Meng Jiang
