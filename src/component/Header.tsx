@@ -37,6 +37,7 @@ class Header extends Component {
     return (
       <View className='search'>
       <AtSearchBar
+        fixed
         showActionButton
         value={this.state.value}
         onChange={this.onChange.bind(this)}
