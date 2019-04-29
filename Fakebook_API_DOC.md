@@ -3,14 +3,13 @@
 本文档为测试alpha版本。
 
 ## 用户信息
----
 ###  校验用户是否合法
 
 请求URL
 -  /user/checkUser
 
 请求方式
-- 'POST'
+- **POST**
 
 请求参数
 ```
@@ -42,14 +41,13 @@ msg:”XXX”
 ```
 
 
----
 ### 用户登录
 
 请求URL
 - /user/login
 
 请求方式
-- 'POST'
+- **POST**
 
 请求参数
 ```
@@ -87,14 +85,13 @@ msg:”XXX”
 
  
 
----
 ### 用户注册
 
 请求URL
 - /user/register
 
 请求方式
-- 'POST'
+- **POST**
 
 请求参数
 ```
@@ -130,14 +127,13 @@ msg:”XXX”
 
  
 
----
 ### 查询用户列表
 
 请求URL
 - /user/queryUsers/{userClass}
 
 请求方式
-- 'GET'
+- **GET**
 
 参数
 ```
@@ -180,14 +176,13 @@ userClass:
 
  
 
----
 ### 查询用户
 
 请求URL
 - /user/queryUser/{userId}
 
 请求方式
-- 'GET'
+- **GET**
 
 请求参数
 ```
@@ -220,7 +215,6 @@ userId: uuid,
 // 1 查询失败
 ```
 
----
 ## 动态信息
 
 ### 首页中查询动态，默认10条
@@ -229,7 +223,7 @@ userId: uuid,
 - /post?limit=XXX
 
 请求方式
-- 'GET'
+- **GET**
 
 请求参数
 ```
@@ -259,14 +253,13 @@ limit: int类型
 
  
 
----
 ### 查询动态详细信息
 
 请求URL
 - /post/{postId}
 
 请求方式
-- 'GET'
+- **GET**
 
 参数
 ```
@@ -296,14 +289,13 @@ postId: uuid
 
  
 
----
 ### 用户插入动态
 
 请求URL
 - /post/insertPost/{userId}
 
 请求方式
-- 'POST'
+- **POST**
 
 参数
 ```
@@ -337,14 +329,13 @@ postId: uuid
 
  
 
----
 ### 用户删除动态
 
 请求URL
 - /post/deletePost/{userId}
 
 请求方式
-- 'POST'
+- **POST**
 
 参数
 ```
@@ -370,9 +361,9 @@ postId: uuid
 // 1 用户登录超时
 // 2 删除失败
 ```
-
 ---
 
  
 
 Copyright (c) 2019, Heng Du & Meng Jiang
+=======
