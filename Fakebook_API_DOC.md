@@ -1,9 +1,10 @@
 # Fakebook API 文档
-该文档描述了Fakebook的API
+本文档描述了Fakebook的API。
+本文档为测试alpha版本。
 
 ## 用户信息
-简要描述
--  校验用户是否合法
+---
+###  校验用户是否合法
 
 请求URL
 -  /user/checkUser
@@ -22,7 +23,7 @@ msg:”XXX”
 }
 ```
 
-返回示例
+返回参数
 ```
 {
        title: 'checkUserRes',
@@ -41,8 +42,8 @@ msg:”XXX”
 ```
 
 
-简要描述
-- 用户登录
+---
+### 用户登录
 
 请求URL
 - /user/login
@@ -66,7 +67,7 @@ msg:”XXX”
 0：不记住密码
 ```
 
-返回示例
+返回参数
 ```
 {
        title: 'loginUserRes',
@@ -86,8 +87,8 @@ msg:”XXX”
 
  
 
-简要描述
-- 用户注册
+---
+### 用户注册
 
 请求URL
 - /user/register
@@ -111,7 +112,7 @@ msg:”XXX”
 }
 ```
 
-返回示例
+返回参数
 ```
 {
   data: {
@@ -129,8 +130,8 @@ msg:”XXX”
 
  
 
-简要描述
-- 查询用户列表
+---
+### 查询用户列表
 
 请求URL
 - /user/queryUsers/{userClass}
@@ -149,7 +150,7 @@ userClass:
 3 黑名单
 99 查询全部用户
 ```
-返回示例
+返回参数
 ```
 {
        title: 'queryUsersRes',
@@ -179,8 +180,8 @@ userClass:
 
  
 
-简要描述
-- 查询用户
+---
+### 查询用户
 
 请求URL
 - /user/queryUser/{userId}
@@ -193,7 +194,7 @@ userClass:
 userId: uuid,
 ```
 
-返回示例
+返回参数
 ```
 {
        title: 'queryUserRes',
@@ -219,10 +220,10 @@ userId: uuid,
 // 1 查询失败
 ```
 
-
+---
 ## 动态信息
-简要描述
-- 首页中查询动态，默认10条
+
+### 首页中查询动态，默认10条
 
 请求URL
 - /post?limit=XXX
@@ -235,7 +236,7 @@ userId: uuid,
 limit: int类型
 ```
 
-返回示例
+返回参数
 ```
 {
        title: 'queryPostRes',
@@ -258,8 +259,8 @@ limit: int类型
 
  
 
-简要描述
-- 查询动态详细信息
+---
+### 查询动态详细信息
 
 请求URL
 - /post/{postId}
@@ -272,7 +273,7 @@ limit: int类型
 postId: uuid
 ```
 
-返回示例
+返回参数
 ```
 {
        title: 'queryPostDetailRes',
@@ -295,8 +296,8 @@ postId: uuid
 
  
 
-简要描述
-- 用户插入动态
+---
+### 用户插入动态
 
 请求URL
 - /post/insertPost/{userId}
@@ -318,7 +319,7 @@ postId: uuid
 }
 ```
 
-返回示例
+返回参数
 ```
 {
        title: 'insertPostRes',
@@ -336,8 +337,8 @@ postId: uuid
 
  
 
-简要描述
-- 用户删除动态
+---
+### 用户删除动态
 
 请求URL
 - /post/deletePost/{userId}
@@ -354,7 +355,7 @@ postId: uuid
 }
 ```
 
-返回示例
+返回参数
 ```
 {
        title: 'deletePostRes',
@@ -369,6 +370,8 @@ postId: uuid
 // 1 用户登录超时
 // 2 删除失败
 ```
+
+---
 
  
 
