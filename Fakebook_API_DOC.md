@@ -3,7 +3,7 @@
 本文档为测试alpha版本。
 
 ## 用户信息
-###  校验用户是否合法
+###  1、校验用户是否合法
 
 请求URL
 -  /user/checkUser
@@ -40,9 +40,7 @@ msg:”XXX”
 
 ```
 
-
----
-### 用户登录
+### 2、用户登录
 
 请求URL
 - /user/login
@@ -86,8 +84,7 @@ msg:”XXX”
 
  
 
----
-### 用户注册
+### 3、用户注册
 
 请求URL
 - /user/register
@@ -129,8 +126,7 @@ msg:”XXX”
 
  
 
----
-### 查询用户列表
+### 4、查询用户列表
 
 请求URL
 - /user/queryUsers/{userClass}
@@ -179,8 +175,7 @@ userClass:
 
  
 
----
-### 查询用户
+### 5、查询用户
 
 请求URL
 - /user/queryUser/{userId}
@@ -221,7 +216,7 @@ userId: uuid,
 
 ---
 ## 动态信息
-### 首页中查询动态，默认10条
+### 1、首页中查询动态，默认10条
 
 请求URL
 - /post?limit=XXX
@@ -257,8 +252,8 @@ limit: int类型
 
  
 
----
-### 查询动态详细信息
+
+### 2、查询动态详细信息
 
 请求URL
 - /post/{postId}
@@ -294,8 +289,8 @@ postId: uuid
 
  
 
----
-### 用户插入动态
+
+### 3、用户插入动态
 
 请求URL
 - /post/insertPost/{userId}
@@ -335,8 +330,8 @@ postId: uuid
 
  
 
----
-### 用户删除动态
+
+### 4、用户删除动态
 
 请求URL
 - /post/deletePost/{userId}
