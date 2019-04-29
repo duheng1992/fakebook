@@ -1,12 +1,17 @@
 # Fakebook API 文档
+该文档描述了Fakebook的API
+
 ## 用户信息
 简要描述
 -  校验用户是否合法
+
 请求URL
 -  /user/checkUser
+
 请求方式
 - 'POST'
-参数
+
+请求参数
 ```
 {
   data: {
@@ -16,6 +21,7 @@ password:”XXX”
 msg:”XXX” 
 }
 ```
+
 返回示例
 ```
 {
@@ -26,22 +32,25 @@ msg:”XXX”
 //返回的备注信息
        msg: “XXXX”,
 }
-res_code： 
-0 用户校验通过
-1 用户不存在
-2 用户密码错误
-3 系统故障
+// res_code： 
+// 0 用户校验通过
+// 1 用户不存在
+// 2 用户密码错误
+// 3 系统故障
 
 ```
 
 
 简要描述
 - 用户登录
+
 请求URL
 - /user/login
+
 请求方式
 - 'POST'
-参数
+
+请求参数
 ```
 {
   data: {
@@ -56,6 +65,7 @@ msg:”XXX”
 1：记住密码
 0：不记住密码
 ```
+
 返回示例
 ```
 {
@@ -66,11 +76,11 @@ msg:”XXX”
        msg: “XXXX”
 }
 
-res_code： 
-0 登录成功
-1 用户不存在
-2 用户密码错误
-3 系统故障
+// res_code： 
+// 0 登录成功
+// 1 用户不存在
+// 2 用户密码错误
+// 3 系统故障
 
 ```
 
@@ -78,11 +88,14 @@ res_code：
 
 简要描述
 - 用户注册
+
 请求URL
 - /user/register
+
 请求方式
 - 'POST'
-参数
+
+请求参数
 ```
 {
   data: {
@@ -97,6 +110,7 @@ user_class: “XXX”
 msg:”XXX” 
 }
 ```
+
 返回示例
 ```
 {
@@ -117,10 +131,13 @@ msg:”XXX”
 
 简要描述
 - 查询用户列表
+
 请求URL
 - /user/queryUsers/{userClass}
+
 请求方式
--' '
+- 'GET'
+
 参数
 ```
 userClass: “XXX”
@@ -155,23 +172,27 @@ userClass:
 ]
 }
 
-res_code： 
-0 查询成功
-1 查询失败
+// res_code： 
+// 0 查询成功
+// 1 查询失败
 ```
 
  
 
 简要描述
 - 查询用户
+
 请求URL
 - /user/queryUser/{userId}
+
 请求方式
 - 'GET'
-参数
+
+请求参数
 ```
 userId: uuid,
 ```
+
 返回示例
 ```
 {
@@ -193,25 +214,27 @@ userId: uuid,
 }
 }
 
-res_code： 
-0 查询成功
-1 查询失败
+// res_code： 
+// 0 查询成功
+// 1 查询失败
 ```
-
- 
 
 
 ## 动态信息
 简要描述
 - 首页中查询动态，默认10条
+
 请求URL
 - /post?limit=XXX
+
 请求方式
 - 'GET'
-参数
+
+请求参数
 ```
 limit: int类型
 ```
+
 返回示例
 ```
 {
@@ -237,14 +260,18 @@ limit: int类型
 
 简要描述
 - 查询动态详细信息
+
 请求URL
 - /post/{postId}
+
 请求方式
 - 'GET'
+
 参数
 ```
 postId: uuid
 ```
+
 返回示例
 ```
 {
@@ -260,7 +287,7 @@ postId: uuid
             summary: “XXXXXXXXXXX…”,
             img_src: “XXXXXXXXXXXX”
             ……
-            这详细页面要展示什么，再补充。。
+            // 这详细页面要展示什么，再补充。。
 }
 ]
 }
@@ -270,23 +297,27 @@ postId: uuid
 
 简要描述
 - 用户插入动态
+
 请求URL
 - /post/insertPost/{userId}
+
 请求方式
 - 'POST'
+
 参数
 ```
-userId: 用户id
+// userId: 用户id
 
 {
   post_title: “XXXX”,
   summary: “XXXX”,
   img_src: “XXX”,
   ……
-  这详细页面要展示什么，再补充。。
+  //这详细页面要展示什么，再补充。。
 
 }
 ```
+
 返回示例
 ```
 {
@@ -297,28 +328,32 @@ userId: 用户id
        msg: “XXXX”
 }
 
-res_code： 
-0 插入成功
-1 用户登录超时
-2 插入失败
+// res_code： 
+// 0 插入成功
+// 1 用户登录超时
+// 2 插入失败
 ```
 
  
 
 简要描述
 - 用户删除动态
+
 请求URL
 - /post/deletePost/{userId}
+
 请求方式
 - 'POST'
+
 参数
 ```
-userId: 用户id
+// userId: 用户id
 
 {
   post_id: uuid,
 }
 ```
+
 返回示例
 ```
 {
@@ -329,10 +364,10 @@ userId: 用户id
        msg: “XXXX”
 }
 
-res_code： 
-0 删除成功
-1 用户登录超时
-2 删除失败
+// res_code： 
+// 0 删除成功
+// 1 用户登录超时
+// 2 删除失败
 ```
 
  
