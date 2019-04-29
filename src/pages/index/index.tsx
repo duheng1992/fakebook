@@ -5,6 +5,7 @@ import { Footer } from '../../component/Footer'
 import { View } from '@tarojs/components'
 
 import { ShowLists } from '../../component/ShowList'
+import { ScrollView } from "@tarojs/components"
 
 import './index.scss'
 import 'taro-ui/dist/style/index.scss'
@@ -30,15 +31,34 @@ export default class Index extends Component {
 
   componentDidHide () { }
 
+  touchedTop() {
+    Taro.showLoading({title: '更新中'})
+    console.log("Touched Top!");
+  }
+
+  touchedBottom() {
+    Taro.showLoading({title: '加载中'})
+    console.log("Touched Bottom!");
+  }
+
   render () {
     return (
-      <View>
-      <Header></Header>
-      
-      <ShowLists></ShowLists>
-      <Footer current="0"></Footer>
-
-      </View>
+      <ScrollView 
+      className='scrollview'
+      scrollY
+      scrollWithAnimation
+      scrollTop='0'
+      lowerThreshold='10'
+      upperThreshold='10'
+      onScrolltoupper={this.touchedTop}
+      onScrollToLower={this.touchedBottom}
+      >
+        <Header></Header>
+        <div className="stayer"></div>
+        <ShowLists></ShowLists>
+        <div className="stayer"></div>
+        <Footer current="0"></Footer>
+      </ScrollView>
     )
   }
 

@@ -1,4 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
+import { ScrollView } from "@tarojs/components";
 import { View, Text } from '@tarojs/components'
 import { AtCard } from "taro-ui"
 
@@ -20,6 +21,9 @@ class ShowLists extends Component {
       })
     }
   }
+
+
+
 
   componentDidMount () {
     this.setState({
@@ -49,7 +53,25 @@ class ShowLists extends Component {
   }
 
   render () {
+    const scrollStyle = {
+      height: '150px'
+    }
+    const scrollTop = 0
+    const Threshold = 20
+
     return (
+          // <ScrollView 
+          //     className='scrollview'
+          //     scrollY
+          //     scrollWithAnimation
+          //     scrollTop='0'
+          //     lowerThreshold='10'
+          //     upperThreshold='10'
+          //     onScrolltoupper={this.touchedTop}
+          //     onScrollToLower={this.touchedBottom}
+          //     >
+          //     <UserCards users={this.state.users} ></UserCards>
+          // </ScrollView>
       <View className='at-row'>
         <UserCards users={this.state.users} ></UserCards>
       </View>
